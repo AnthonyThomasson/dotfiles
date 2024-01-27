@@ -1,0 +1,1 @@
+alias sayhi="echo 'hi'"
