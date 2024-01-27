@@ -1,7 +1,7 @@
 echo "\n🔥 Installing zsh 🔥"
 
 # Install oh-my-zsh
-ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
+export ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
 if [ ! -d $ZSH ]; then
 	if [ -d "$HOME/.oh-my-zsh" ]; then
 		echo "🗑️ Removing existing oh-my-zsh";
@@ -65,5 +65,7 @@ source \$ZSH/oh-my-zsh.sh
 
 ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
-ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/.zsh_history
-echo "🔗 Created System Link Here: $HOME/.zsh_history"
+
+mkdir -p $HOME/commandhistory
+ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/commandhistory/.zsh_history
+echo "🔗 Created System Link Here: $HOME/commandhistory/.zsh_history"
