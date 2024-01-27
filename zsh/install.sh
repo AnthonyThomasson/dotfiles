@@ -3,6 +3,7 @@ echo "\n🔥 Installing zsh 🔥"
 # Install oh-my-zsh
 ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
 if [ ! -d $ZSH ]; then
+	rm -rf "$HOME/.oh-my-zsh"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
 	wait
 	if [ ! -d $ZSH ]; then
