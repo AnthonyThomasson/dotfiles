@@ -63,11 +63,7 @@ source \$ZSH/oh-my-zsh.sh
 [[ -f "\$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.post.zsh"
 " > $DOTFILES_PATH/zsh/.zshrc
 
-rm -f $HOME/.zshrc
 ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
-
-mkdir -p $HOME/commandhistory
-rm -f $HOME/commandhistory/.zsh_history
-ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/commandhistory/.zsh_history
-echo "🔗 Created System Link Here: $HOME/commandhistory/.zsh_history"
+ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/.zsh_history
+echo "🔗 Created System Link Here: $HOME/.zsh_history"
