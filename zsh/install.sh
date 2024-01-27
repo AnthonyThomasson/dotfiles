@@ -6,6 +6,7 @@ if [ ! -d $ZSH ]; then
 	if [ -d "$HOME/.oh-my-zsh" ]; then
 		echo "🗑️ Removing existing oh-my-zsh";
 		rm -rf "$HOME/.oh-my-zsh"
+		echo "✅ removed existing oh-my-zsh";
 	fi
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
 	wait
