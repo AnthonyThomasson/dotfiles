@@ -27,6 +27,7 @@ history=$(cat "$DOTFILES_PATH/zsh/conf/history.sh")
 aliases=$(cat "$DOTFILES_PATH/zsh/conf/aliases.sh")
 plugins=$(cat "$DOTFILES_PATH/zsh/conf/plugins.sh")
 theme=$(cat "$DOTFILES_PATH/zsh/conf/theme.sh")
+editors=$(cat "$DOTFILES_PATH/zsh/conf/editors.sh")
 echo "
 # Fig pre block. Keep at the top of this file.
 [[ -f "\$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.pre.zsh"
@@ -43,6 +44,9 @@ ${theme}
 
 # PLUGINS
 ${plugins}
+
+# EDITORS
+${editors}
 
 # ALIASES
 ${aliases}
