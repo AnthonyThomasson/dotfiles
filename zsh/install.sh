@@ -23,6 +23,7 @@ else
 fi
 
 # Create .zshrc
+history=$(cat "$DOTFILES_PATH/zsh/conf/history.sh")
 aliases=$(cat "$DOTFILES_PATH/zsh/conf/aliases.sh")
 plugins=$(cat "$DOTFILES_PATH/zsh/conf/plugins.sh")
 theme=$(cat "$DOTFILES_PATH/zsh/conf/theme.sh")
@@ -30,8 +31,12 @@ echo "
 # Fig pre block. Keep at the top of this file.
 [[ -f "\$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.pre.zsh"
 
+# ZSH SETUP
 export DOTFILES_PATH="$DOTFILES_PATH"
 export ZSH="\$DOTFILES_PATH/zsh/.oh-my-zsh"
+
+# HISTORY
+${history}
 
 # THEME
 ${theme}

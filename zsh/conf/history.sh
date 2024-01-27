@@ -1,0 +1,1 @@
+HISTFILE="$DOTFILES_PATH/zsh/.zsh_history"
