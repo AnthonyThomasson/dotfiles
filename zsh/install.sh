@@ -1,9 +1,8 @@
 echo "\n🔥 Installing zsh 🔥"
 
 # Install oh-my-zsh
-export ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
-if [ ! -d "$ZSH" ]; then
-	rm -rf ~/.oh-my-zsh
+ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
+if [ ! -d $ZSH ]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
 	wait
 	if [ ! -d $ZSH ]; then
@@ -34,8 +33,7 @@ echo "
 
 # ZSH SETUP
 export DOTFILES_PATH="$DOTFILES_PATH"
-export ZSH="$ZSH"
-export ZSHRC="\$DOTFILES_PATH/zsh/.zshrc"
+export ZSH="\$DOTFILES_PATH/zsh/.oh-my-zsh"
 
 # HISTORY
 ${history}
@@ -55,7 +53,9 @@ source \$ZSH/oh-my-zsh.sh
 [[ -f "\$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.post.zsh"
 " > $DOTFILES_PATH/zsh/.zshrc
 
-ln -sf $ZSHRC $HOME/.zshrc
+ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
-ln -sf $HISTFILE $HOME/commandhistory/.zsh_history
+
+mkdir -p $HOME/commandhistory
+ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/commandhistory/.zsh_history
 echo "🔗 Created System Link Here: $HOME/commandhistory/.zsh_history"
