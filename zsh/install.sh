@@ -56,5 +56,5 @@ source \$ZSH/oh-my-zsh.sh
 
 ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
-ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/.zsh_history
-echo "🔗 Created System Link Here: $HOME/.zsh_history"
+ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/commandhistory/.zsh_history
+echo "🔗 Created System Link Here: $HOME/commandhistory/.zsh_history"
