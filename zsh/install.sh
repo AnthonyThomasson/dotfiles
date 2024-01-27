@@ -3,7 +3,10 @@ echo "\n🔥 Installing zsh 🔥"
 # Install oh-my-zsh
 ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
 if [ ! -d $ZSH ]; then
-	rm -rf "$HOME/.oh-my-zsh"
+	if [ -d "$HOME/.oh-my-zsh" ]; then
+		echo "🗑️ Removing existing oh-my-zsh";
+		rm -rf "$HOME/.oh-my-zsh"
+	fi
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
 	wait
 	if [ ! -d $ZSH ]; then
