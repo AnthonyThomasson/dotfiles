@@ -35,6 +35,7 @@ echo "
 # ZSH SETUP
 export DOTFILES_PATH="$DOTFILES_PATH"
 export ZSH="$ZSH"
+export ZSHRC="\$DOTFILES_PATH/zsh/.zshrc"
 
 # HISTORY
 ${history}
@@ -54,7 +55,7 @@ source \$ZSH/oh-my-zsh.sh
 [[ -f "\$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.post.zsh"
 " > $DOTFILES_PATH/zsh/.zshrc
 
-ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
+ln -sf $ZSHRC $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
-ln -sf $DOTFILES_PATH/zsh/.zsh_history $HOME/commandhistory/.zsh_history
+ln -sf $HISTFILE $HOME/commandhistory/.zsh_history
 echo "🔗 Created System Link Here: $HOME/commandhistory/.zsh_history"
