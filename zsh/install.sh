@@ -8,9 +8,7 @@ if [ ! -d $ZSH ]; then
 		rm -rf "$HOME/.oh-my-zsh"
 		echo "✅ removed existing oh-my-zsh";
 	fi
-	curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o install_ohmyzsh.sh
-	sh install_ohmyzsh.sh --unattended
-	rm -f install_ohmyzsh.sh
+	curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 	if [ ! -d $ZSH ]; then
 		echo "❌ oh-my-zsh failed to install";
 		exit 1;
