@@ -1,8 +1,9 @@
 echo "\n🔥 Installing zsh 🔥"
 
 # Install oh-my-zsh
-ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
-if [ ! -d $ZSH ]; then
+export ZSH=$DOTFILES_PATH/zsh/.oh-my-zsh
+if [ ! -d "$ZSH" ]; then
+	rm -rf ~/.oh-my-zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
 	wait
 	if [ ! -d $ZSH ]; then
@@ -33,7 +34,7 @@ echo "
 
 # ZSH SETUP
 export DOTFILES_PATH="$DOTFILES_PATH"
-export ZSH="\$DOTFILES_PATH/zsh/.oh-my-zsh"
+export ZSH="$ZSH"
 
 # HISTORY
 ${history}
