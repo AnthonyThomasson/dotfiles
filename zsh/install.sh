@@ -55,6 +55,9 @@ ${editors}
 # ALIASES
 ${aliases}
 
+# PATH VARIABLES
+export PATH=$PATH:/usr/local/go/bin
+
 source \$ZSH/oh-my-zsh.sh
 
 # Fig post block. Keep at the bottom of this file.
