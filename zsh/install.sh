@@ -31,6 +31,7 @@ history=$(cat "$DOTFILES_PATH/zsh/conf/history.sh")
 aliases=$(cat "$DOTFILES_PATH/zsh/conf/aliases.sh")
 plugins=$(cat "$DOTFILES_PATH/zsh/conf/plugins.sh")
 theme=$(cat "$DOTFILES_PATH/zsh/conf/theme.sh")
+path=$(cat "$DOTFILES_PATH/zsh/conf/path.sh")
 editors=$(cat "$DOTFILES_PATH/zsh/conf/editors.sh")
 echo "
 # Fig pre block. Keep at the top of this file.
@@ -56,7 +57,7 @@ ${editors}
 ${aliases}
 
 # PATH VARIABLES
-export PATH=$PATH:/usr/local/go/bin
+${path}
 
 source \$ZSH/oh-my-zsh.sh
 
