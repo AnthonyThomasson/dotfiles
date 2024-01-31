@@ -1,6 +1,6 @@
 export DOTFILES_PATH=$PWD
 
-echo "🔍 Verifying installer dependencies..."
+echo "\n🔍 Verifying installer dependencies..."
 isMissingDependency=false
 if command -v curl >/dev/null 2>&1; then
 	echo "✅ curl installed"
