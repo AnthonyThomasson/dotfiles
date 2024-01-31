@@ -19,7 +19,7 @@ if $isMissingDependency; then
 	echo "❌ git not installed"
 	exit 1
 else
-	echo "✅ verified installer dependencies"
+	echo "👌 verified installer dependencies"
 fi
 
 
