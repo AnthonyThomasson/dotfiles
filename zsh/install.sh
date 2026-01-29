@@ -34,9 +34,6 @@ theme=$(cat "$DOTFILES_PATH/zsh/conf/theme.sh")
 path=$(cat "$DOTFILES_PATH/zsh/conf/path.sh")
 editors=$(cat "$DOTFILES_PATH/zsh/conf/editors.sh")
 echo "
-# Fig pre block. Keep at the top of this file.
-[[ -f "\$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.pre.zsh"
-
 # ZSH SETUP
 export DOTFILES_PATH="$DOTFILES_PATH"
 export ZSH="\$DOTFILES_PATH/zsh/.oh-my-zsh"
@@ -60,10 +57,6 @@ ${aliases}
 ${path}
 
 source \$ZSH/oh-my-zsh.sh
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "\$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "\$HOME/.fig/shell/zshrc.post.zsh"
-" > $DOTFILES_PATH/zsh/.zshrc
 
 ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
