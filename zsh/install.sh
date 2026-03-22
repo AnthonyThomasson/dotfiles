@@ -35,8 +35,8 @@ path=$(cat "$DOTFILES_PATH/zsh/conf/path.sh")
 editors=$(cat "$DOTFILES_PATH/zsh/conf/editors.sh")
 echo "
 # ZSH SETUP
-export DOTFILES_PATH="$DOTFILES_PATH"
-export ZSH="\$DOTFILES_PATH/zsh/.oh-my-zsh"
+export DOTFILES_PATH=\"$DOTFILES_PATH\"
+export ZSH=\"\$DOTFILES_PATH/zsh/.oh-my-zsh\"
 
 # HISTORY
 ${history}
@@ -57,6 +57,7 @@ ${aliases}
 ${path}
 
 source \$ZSH/oh-my-zsh.sh
+" > $DOTFILES_PATH/zsh/.zshrc
 
 ln -sf $DOTFILES_PATH/zsh/.zshrc $HOME/.zshrc
 echo "🔗 Created System Link Here: $HOME/.zshrc"
